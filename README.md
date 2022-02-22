@@ -11,7 +11,7 @@ public static void main(String[] args) {
 
 		JLabel lblUsuario = new JLabel(" usuário ");
 		JTextField txtUsuario = new JTextField(20);
-		txtUsuario.setToolTipText(" Informe seu usuáio de acesso... ");
+		txtUsuario.setToolTipText(" Informe seu usuário de acesso... ");
 
 		JLabel lblSenha = new JLabel(" Senha: ");
 		JPasswordField txtSenha = new JPasswordField(20);
@@ -30,5 +30,7 @@ public static void main(String[] args) {
 		frame.setContentPane(panel);
 		frame.pack();
 		frame.setVisible(true);
+
 	}
+
 }
