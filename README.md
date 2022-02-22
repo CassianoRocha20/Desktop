@@ -1,7 +1,7 @@
-# Desktop
+# Login e senha
 public static void main(String[] args) {
-		final String USER = " Cassiano ";
-		final String PASS = " senha123 ";
+		final String USER = "cassiano";
+		final String PASS = "12345";
 
 		JFrame frame = new JFrame(" CRUD :: Acesso ao sistema ");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -18,6 +18,20 @@ public static void main(String[] args) {
 		txtSenha.setToolTipText(" Informe sua senha de acesso... ");
 
 		JButton btnLogin = new JButton(" Login ");
+
+		btnLogin.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (txtUsuario.getText().equals(USER) && new String(txtSenha.getPassword()).equals(PASS)) {
+					JOptionPane.showMessageDialog(frame, " Acesso autorizado ");
+				}else {
+					JOptionPane.showMessageDialog(frame, " Acesso negado ");
+
+				}
+			}
+
+		});
 
 		panel.add(lblUsuario);
 		panel.add(txtUsuario);
